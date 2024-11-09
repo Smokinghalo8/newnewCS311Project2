@@ -1,0 +1,6 @@
+Heuristic Eval:
+
+Visibility of System Status is Horrendous, it tells you barely anything about any ongoing process, except for the "knowledge score changing when you click a button!"
+Could use major improvments.
+
+Error Prevention is really good, considering that all the buttons do something and they don't break. Nice job!
