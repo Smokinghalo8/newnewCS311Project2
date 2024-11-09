@@ -1,4 +1,4 @@
-// pages/index.js
+//pages/index.js
 import { useState, useEffect } from 'react';
 import Flashcard from '../components/Flashcard';
 
@@ -20,9 +20,8 @@ export default function Home() {
   const handleReview = async (cardId, rating) => {
     const updatedCard = cards.find(card => card.id === cardId);
 
-    // Calculate the new amount_understood and time based on the rating
     const newAmountUnderstood = updatedCard.amount_understood + rating;
-    const newTime = updatedCard.time + 1; // increment the review time by 1 unit (this could be more complex)
+    const newTime = updatedCard.time + 1; //Increase the time by 1(this could be more complex, but who knows)
 
     const updatedFlashcard = {
       ...updatedCard,
@@ -30,20 +29,20 @@ export default function Home() {
       time: newTime,
     };
 
-    // Update the flashcard data in the backend API
+    //Update
     await fetch('/api/flashcards', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedFlashcard),
     });
 
-    // Update the local state with the updated flashcard
+    //Update Local with the updated flashcard
     const updatedCards = cards.map(card =>
       card.id === cardId ? updatedFlashcard : card
     );
     setCards(updatedCards);
 
-    // Show the next card
+    //Show the next card
     setCurrentCardIndex((currentCardIndex + 1) % cards.length);
   };
 
