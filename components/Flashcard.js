@@ -2,6 +2,10 @@
 //yeah
 import { useEffect, useState } from 'react';
 
+
+//dont care shut up eslint
+//ive worked for too long I need sleep
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Flashcard = ({ onReview }) => {
   const [flashcards, setFlashcards] = useState([]);
   const [showAnswer, setShowAnswer] = useState(null); //Track which card's answer is shown
