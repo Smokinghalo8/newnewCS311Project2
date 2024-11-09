@@ -158,6 +158,7 @@ const Flashcard = ({ onReview }) => {
           ))
         )}
       </div>
+      
     </div>
   );
 };
